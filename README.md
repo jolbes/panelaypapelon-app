@@ -17,4 +17,5 @@ Centro Educativo: CODERHOUSE
 ## Dependencias instaladas
 
 Material UI @mui/material 
+
 Material Icons @mui/icons-material
