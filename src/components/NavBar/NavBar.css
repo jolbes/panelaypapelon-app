@@ -1,0 +1,65 @@
+.navbar{
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    height: 160px;
+}
+.navbar-logo{
+    width: 20%;
+}
+.navbar img{
+    width: 130px;
+}
+
+.nav-links{
+    display: flex;
+    width: 60%;
+    justify-content: center;
+}
+.nav-ul{
+    display: flex;
+    justify-content: center;
+    width: 70vh;
+}
+.nav-links ul li{
+    list-style: none;
+    margin: 10px;
+}
+
+.nav-links ul li button{
+    display: flex;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #CB6120;
+    background-color: white;
+    border: none;
+    padding: 5px;
+}
+.nav-links ul li button:hover{
+    background-color: rgb(255, 247, 240);
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.nav-login-cart{
+    background-color: white;
+    width: 20%;
+}
+
+.btnLogin{
+    color: #CB6120;
+    padding: 0 20px 0 20px;
+    margin: 0 5px 0 5px;
+}
+.btnLogin:hover{
+    cursor: pointer;
+}
+
+.btnCart{
+    color: #CB6120;
+    padding: 0 20px 0 20px;
+    margin: 0 5px 0 5px;
+}
+.btnCart:hover{
+    cursor: pointer;
+}
