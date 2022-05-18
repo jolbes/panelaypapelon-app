@@ -1,0 +1,8 @@
+.div__cart__custom{
+    display: flex;
+    size: 10px;
+    margin: 10px;
+}
+.cart__custom{
+    color: black;
+}

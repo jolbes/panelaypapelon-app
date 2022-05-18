@@ -1,0 +1,15 @@
+.card__item{
+    display: flex;
+    flex-direction: column;
+}
+.card__item p{
+    font-size: 1.5rem;
+}
+.card__item span{
+    
+}
+.card__item img{
+    width: 250px;
+    display: flex;
+    flex-direction: row;
+}

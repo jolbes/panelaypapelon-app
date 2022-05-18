@@ -2,9 +2,9 @@ import './NavBar.css'
 
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
-import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
-import LoginIcon from '@mui/icons-material/Login';
-
+import LoginWidget from '../LoginWidget/LoginWidget';
+import CartWidget from '../CartWidget/CartWidget'
+import { Button } from '@mui/material';
 
 
 
@@ -13,7 +13,8 @@ const NavBar = () => {
         <AppBar position="static">
                 <Toolbar className='navbar'>
                         <div container className='nav-logo'>
-                            <img src='./assets/brand/logo.png' alt='Logo Panela & Papelon Market' ></img>
+                            <a href='index.html'><img src='./assets/brand/logo.png' alt='Logo Panela & Papelon Market' ></img></a>
+                            
                         </div>
                         <div container className='nav-links'>
                             <ul className='nav-ul'>
@@ -32,8 +33,9 @@ const NavBar = () => {
                             </ul>
                         </div>
                         <div className='nav-login-cart'>
-                        <LoginIcon container className='btnLogin' fontSize='large' />
-                        <ShoppingCartIcon container className="btnCart" fontSize='large' />
+                            <Button> <LoginWidget /><span>Login</span> </Button>
+                            <Button> <CartWidget /><span>Carrito</span> </Button>
+                            
                         </div>
                 </Toolbar>
         </AppBar>

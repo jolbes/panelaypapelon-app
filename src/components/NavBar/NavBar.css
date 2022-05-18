@@ -3,7 +3,7 @@
     display: flex;
     justify-content: center;
     height: 160px;
-    width: 100vw;
+    
 }
 .navbar-logo{
     width: 100vw;
@@ -16,7 +16,7 @@
 
 .nav-links{
     display: flex;
-    width: 100vw;
+    width: 70%;
     justify-content: center;
 }
 .nav-ul{
@@ -48,22 +48,6 @@
     background-color: white;
     display: flex;
     flex-direction: row-reverse;
-}
-
-.btnLogin{
-    color: #CB6120;
-    padding: 0 20px 0 20px;
     margin: 0 5px 0 5px;
-}
-.btnLogin:hover{
-    cursor: pointer;
-}
-
-.btnCart{
-    color: #CB6120;
-    padding: 0 20px 0 20px;
-    margin: 0 5px 0 5px;
-}
-.btnCart:hover{
-    cursor: pointer;
+    padding: 0 5px 0 5px;
 }
