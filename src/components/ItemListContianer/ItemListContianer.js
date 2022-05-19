@@ -1,19 +1,22 @@
-import CardItem from "../Card/Card"
-import {Grid} from "@mui/material"
+import './ItemListContianer.css'
+import {Card, Button, CardContent} from '@mui/material';
 
-const ItemListContianer = () => {
+const ItemListContianer = ({title, price, image}) => {
+    
+    //console.log("Propiedades de ItemList", props)
     return(
-        <Grid container>
-            <Grid item md={3}>
-                <CardItem title={"Producto 1"} price={25000}  />
-            </Grid>
-            <Grid item md={3}>
-                <CardItem title={"Producto 2"} price={35000}  />
-            </Grid>
-            <Grid item md={3}>
-                <CardItem title={"Producto 3"} price={45000} />
-            </Grid>
-        </Grid>
+        <Card sx={{ minWidth: 275 }}>
+            <CardContent className='card__content'>
+                <div className="card__item">
+                    <div>
+                        <img src={`./assets/items/${image}`} alt='Imagen de producto' />
+                    </div>
+                    <p>{title}</p>
+                    <span>$ {price}</span>
+                    <Button variant={'outlined'}>Detalle</Button> 
+                </div>
+            </CardContent>
+        </Card>
     )
 }
 

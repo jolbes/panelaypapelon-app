@@ -1,12 +1,27 @@
+.MuiGrid-root.MuiGrid-item.MuiGrid-grid-md-4.css-13i4rnv-MuiGrid-root{
+
+    margin: 50px 10px 50px 10px;
+}
+
+.MuiContainer-root.MuiContainer-maxWidthLg.css-1oqqzyl-MuiContainer-root{
+    display:flex;
+    flex-direction: row;
+}
+
 .card__item{
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 .card__item p{
+    margin: 10px 0 10px 0;
     font-size: 1.5rem;
+    font-weight: 600;
 }
 .card__item span{
-    
+    margin: 5px 0 5px 0;
+    font-weight: 400;
 }
 .card__item img{
     width: 250px;

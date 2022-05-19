@@ -1,5 +1,8 @@
 .App {
+  display: flex;
+  flex-direction: column;
   text-align: center;
+  justify-content: center;
 }
 
 .App-logo {
@@ -35,4 +38,22 @@
   to {
     transform: rotate(360deg);
   }
+}
+/*
+.container__custom{
+  display: flex;
+  flex-direction:  row;
+  margin: 50px 10px 50px 10px;
+}*/
+.contenido__custom{
+  display: flex;
+  justify-content: center;
+}
+
+.app__Class__Container{
+  margin-top: 40px;
+}
+
+.app_ItemListContainer{
+  margin: 5px;
 }
