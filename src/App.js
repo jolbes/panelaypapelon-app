@@ -11,7 +11,7 @@ function App() {
       <NavBar />
     </div>
     <Container className='app__Class__Container'>
-      <Grid container className='app_ItemListContainer'>
+      <Grid container spacing={2} className='app_ItemListContainer'>
         <Grid item md={3}>
           <ItemListContianer title={"Producto 1"} price={35000} image={"producto1.webp"}/>
         </Grid>
