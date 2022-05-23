@@ -6,8 +6,6 @@ import ItemCount from '../ItemCount/ItemCount'
 
 const ItemListContianer = ({title, price, image}) => {
     const [open, setOpen] = useState(false)
-    
-
     const handleColse = () =>{
       setOpen(false)
     }
@@ -19,11 +17,12 @@ const ItemListContianer = ({title, price, image}) => {
                 <div className="card__item">
                     <div className='card__item__inside'>
                         <img src={`./assets/items/${image}`} alt='Imagen de producto' />
-                    <Button variant={'outlined'} onClick={() => setOpen(true)}>Detalle</Button> 
+                    <Button variant={'outlined'} onClick={() => setOpen(true)}>Detalle</Button>
                     </div>
                     <p>{title}</p>
                     <span>$ {price}</span>
                     <ItemCount />
+                    
                 </div>
             </CardContent>
             <ModalWindows handleColse={handleColse} open={open}>

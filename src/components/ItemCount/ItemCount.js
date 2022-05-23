@@ -3,8 +3,11 @@ import { Button } from '@mui/material'
 import { useState } from 'react'
 
 const ItemCount = () => {
-    const [count, setCount] = useState(0)
+    const [count, setCount] = useState(1)
+    const [stock, setStock] = useState(5)
+    //const [initial, useInitial] = useState(1)
     const addCount = () => {
+        if(count < stock)
         setCount (count + 1)
     }
     const removeCount = () => {
@@ -13,11 +16,15 @@ const ItemCount = () => {
         }
     }
     return(
+        <>
         <div className='item-count'>
         <Button onClick={removeCount} disabled={count === 0}>-</Button>
         <p>{count}</p>
         <Button onClick={addCount}>+</Button>
         </div>
+        <Button onClick={onAdd =>{if(count !== 0){console.log(
+            `La cantidad de items a comprar es: ${count}`)}}}>Comprar</Button> 
+        </>
     )
 
 }
