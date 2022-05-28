@@ -16,13 +16,8 @@ function App() {
       <NavBar />
     </div>
     <Container className='app__Class__Container'>
-      <Grid container spacing={2} className='app_ItemListContainer'>
-        <Grid item md={4}>
-          <ItemList />
-        </Grid>
-      </Grid>
+        <ItemList />
     </Container>
-    <ItemList />
     </>
   );
 }

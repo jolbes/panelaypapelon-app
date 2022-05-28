@@ -34,7 +34,6 @@ const ItemListContianer = ({title, price, image}) => {
                 <div>Nombre: {title}</div>
                 <span>Precio: $ {price}</span>
                 <Button onClick={()=> setOpen(false)}>Cerrar</Button>
-
             </ModalWindows>
         </Card>
     )

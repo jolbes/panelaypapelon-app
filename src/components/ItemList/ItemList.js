@@ -3,6 +3,7 @@ import { Grid } from "@mui/material"
 import { Card } from "@mui/material"
 import ItemListContianer from "../ItemListContianer/ItemListContianer"
 import ItemCount from "../ItemCount/ItemCount"
+import './ItemList.css'
 
 
 
@@ -13,41 +14,41 @@ const ItemList = ({title}) => {
         id: 1,
         title:"Producto 1",
         price: 10000,
-        stock: 5,
-        description: '',
-        image: "producto1.webp"
+        stock: 1,
+        description: 'Descripcion 1',
+        image: "./assets/items/producto1.webp"
         },
         {
         id: 2,
         title:"Producto 2",
         price: 20000,
-        stock: 5,
-        description: '',
-        image: "producto2.webp"
+        stock: 2,
+        description: 'Descripcion 2',
+        image: "./assets/items/producto2.webp"
         },
         {
         id: 3,
         title:"Producto 3",
         price: 30000,
-        stock: 5,
-        description: '',
-        image: "producto3.webp"
+        stock: 3,
+        description: 'Descripcion 3',
+        image: "./assets/items/producto3.webp"
         },
         {
         id: 4,
         title:"Producto 4",
         price: 40000,
-        stock: 5,
-        description: '',
-        image: "producto4.webp"
+        stock: 4,
+        description: 'Descripcion 4',
+        image: "./assets/items/producto4.webp"
         },
         {
         id: 5,
         title:"Producto 5",
         price: 50000,
         stock: 5,
-        description: '',
-        image: "producto5.webp"
+        description: 'Descripcion 5',
+        image: "./assets/items/producto5.webp"
         },
     ]
     
@@ -81,10 +82,12 @@ const ItemList = ({title}) => {
                 products.map( (productos) => {
                     const {id, title, price, description, image} = productos
                     return(
-                        <div key={id}>
-                            <img src="./assets/items/producto1.webp" />
+                        <div key={id} className='imgMapProducts' >
+                            <img src={image} />
+                            
                             <h2>{title}</h2>
                             <p>El precio es de : {price}</p>
+                            <p>{description}</p>
                             <ItemCount />
                         </div>
                     )
