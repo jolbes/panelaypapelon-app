@@ -1,0 +1,11 @@
+.itemDetail {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+.itemDetail img {
+  display: flex;
+  flex-direction: row;
+  align-self: center;
+  width: 450px;
+}

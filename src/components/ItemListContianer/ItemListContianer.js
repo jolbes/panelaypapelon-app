@@ -3,14 +3,14 @@ import {Card, Button, CardContent } from '@mui/material';
 import ModalWindows from '../Modal/Modal';
 import { useState } from 'react';
 import ItemCount from '../ItemCount/ItemCount'
-import ItemList from '../ItemList/ItemList';
+
 
 const ItemListContianer = ({title, price, image}) => {
     const [open, setOpen] = useState(false)
     const handleColse = () =>{
       setOpen(false)
     }
-
+ 
     //console.log("Propiedades de ItemList", props)
     return(
         <Card sx={{ minWidth: 275 }}>
