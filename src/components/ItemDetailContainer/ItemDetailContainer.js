@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import Item from "../Item/Item"
 import ItemDetail from "../ItemDetail/ItemDetail";
 import { product } from "../../utils/productsMock"
+import React from "react";
 
 const ItemDetailContainer = ({greeting}) => {
     const [item, setProduct] = useState()
