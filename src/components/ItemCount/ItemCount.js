@@ -1,6 +1,6 @@
 import "./ItemCount.css";
 import { Alert, AlertTitle, Button } from "@mui/material";
-import { React, useState } from "react";
+import React, { useState } from "react";
 
 const ItemCount = ({ initial, stock, title }) => {
   const [count, setCount] = useState(initial);

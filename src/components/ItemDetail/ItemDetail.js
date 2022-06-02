@@ -1,9 +1,11 @@
 import "./ItemDetail.css"
 import ItemCount from '../ItemCount/ItemCount'
 import React from 'react';
-const ItemDetail = ({data}) => {
-    const {title, image, description, price, stock} = data
-    console.log(data)
+import { product } from "../../utils/productsMock";
+
+const ItemDetail = ({product}) => {
+    const {title, image, description, price, stock} = product
+    console.log(product)
     return(
         <div className="itemDetail">
             <h2>

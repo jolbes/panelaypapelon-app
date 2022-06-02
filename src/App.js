@@ -8,16 +8,14 @@ import React from 'react'
 function App() {
   return (
     <>
-      <div className="App">
+      
         <NavBar />
         <BrowserRouter>
           <Routes>
-            <Route exact path='/' element={<h1>Hello World</h1>} />
+            <Route path='/' element={<ItemDetailContainer />} />
           </Routes>
         </BrowserRouter>
-        <ItemDetailContainer />
-  
-      </div>
+        
     </>
   );
 }
