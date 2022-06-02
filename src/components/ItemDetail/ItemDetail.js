@@ -3,9 +3,9 @@ import ItemCount from '../ItemCount/ItemCount'
 import React from 'react';
 
 
-const ItemDetail = ({product}) => {
-    const {title, image, description, price, stock} = product
-    console.log(product)
+const ItemDetail = ({data}) => {
+    const {title, image, description, price, stock} = data
+    console.log(data)
     return(
         <div className="itemDetail">
             <h2>
