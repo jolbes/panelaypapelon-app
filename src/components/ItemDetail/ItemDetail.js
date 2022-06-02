@@ -1,7 +1,7 @@
 import "./ItemDetail.css"
 import ItemCount from '../ItemCount/ItemCount'
 import React from 'react';
-import { product } from "../../utils/productsMock";
+
 
 const ItemDetail = ({product}) => {
     const {title, image, description, price, stock} = product
@@ -11,7 +11,7 @@ const ItemDetail = ({product}) => {
             <h2>
                 {title}
             </h2>
-            <img src={image} />
+            <img src={image} alt="Producto"/>
             <p>Descripcion: {description}</p>
             <span>Precio: ${price}</span>
             <span>En stock: {stock}</span>
