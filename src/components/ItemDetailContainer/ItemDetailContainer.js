@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react"
+import { React, useEffect, useState } from "react"
 import Item from "../Item/Item"
 import ItemDetail from "../ItemDetail/ItemDetail";
 import { product } from "../../utils/productsMock"
@@ -21,17 +21,13 @@ const ItemDetailContainer = ({greeting}) => {
         })
     },[])
 
-
-
     return(
         <>
         <div>
             <h1>Detalles del producto</h1>
         </div>
-            <ItemDetail data={product} />
-            
+        <ItemDetail data={item} />
         </>
-        
     )
 }
 export default ItemDetailContainer

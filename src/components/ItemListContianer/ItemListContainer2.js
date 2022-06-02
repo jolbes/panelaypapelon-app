@@ -2,7 +2,7 @@ import {useState, useEfect} from "react"
 import {Products} from "../../utils/productsMock"
 import ItemList from "../ItemList/ItemList"
 import {Spinner} from "../Loading/Loading"
-
+import React from 'react';
 
 const ItemListContainer2 = ({greeting}) => {
 

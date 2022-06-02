@@ -5,7 +5,7 @@ import Toolbar from '@mui/material/Toolbar';
 import LoginWidget from '../LoginWidget/LoginWidget';
 import CartWidget from '../CartWidget/CartWidget'
 import { Button } from '@mui/material';
-
+import React from 'react';
 
 
 const NavBar = () => {

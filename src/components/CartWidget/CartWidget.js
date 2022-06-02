@@ -1,6 +1,6 @@
 import LocalMallOutlinedIcon from '@mui/icons-material/LocalMallOutlined';
 import './CartWidget.css'
-
+import React from 'react';
 const CartWidget = () => {
     return(
         <div className='div__cart__custom'>

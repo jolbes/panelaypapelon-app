@@ -1,5 +1,6 @@
 import "./ItemDetail.css"
 import ItemCount from '../ItemCount/ItemCount'
+import React from 'react';
 const ItemDetail = ({data}) => {
     const {title, image, description, price, stock} = data
     console.log(data)

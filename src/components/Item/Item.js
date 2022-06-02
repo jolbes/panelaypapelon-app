@@ -6,6 +6,7 @@ import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import ItemCount from "../ItemCount/ItemCount";
 
+
 const Item = ({products}) => {
     const {id, title, price, stock, description, image} = products
     return(
