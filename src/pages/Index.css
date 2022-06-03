@@ -1,0 +1,7 @@
+.indexDivContainer{
+    background-image: url('../assets/images/index1.jpg') ;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+}

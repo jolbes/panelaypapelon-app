@@ -2,7 +2,7 @@ import { useEffect, useState } from "react"
 import { Grid } from "@mui/material"
 import ItemCount from "../ItemCount/ItemCount"
 import './ItemList.css'
-import products from "../../utils/productsMock"
+import { products } from "../../utils/productsMock"
 import React from 'react';
 
 
