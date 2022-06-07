@@ -1,11 +1,12 @@
 import React from 'react'
-import ItemListContainer2 from '../components/ItemListContainer/ItemListContianer'
-import productos from '../utils/productsMock'
+
+
 const Contacto = () => {
     return(
-        <ItemListContainer2 />
+        <div className='flex  flex-row align-middle'>
+            <h1 className='flex justify-between'>Página de contacto</h1>
+        </div>
         
     )
 }
-console.log(productos)
 export default Contacto

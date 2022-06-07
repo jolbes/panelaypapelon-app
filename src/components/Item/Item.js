@@ -6,8 +6,8 @@ import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import ItemCount from "../ItemCount/ItemCount";
 
-const Item = (getProducts) => {
-  const { title, price, stock, description, image } = products;
+const Item = ({ product }) => {
+  const { title, price, stock, description, image } = product;
   return (
     <Card sx={{ maxWidth: 345 }}>
       <CardMedia
@@ -31,7 +31,7 @@ const Item = (getProducts) => {
         </Typography>
       </CardContent>
       <CardActions>
-        <ItemCount initil={1} />
+        <ItemCount initial={1} stock={stock} />
       </CardActions>
     </Card>
   );

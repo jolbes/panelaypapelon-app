@@ -1,3 +1,11 @@
+.item__list {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
 .card__content{
     margin: 5px;
 }
