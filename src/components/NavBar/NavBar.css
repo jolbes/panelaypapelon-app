@@ -1,3 +1,7 @@
+.btn-links{
+    color: orange;
+    background-color: transparent;
+}
 .navbar{
     background-color: white;
     display: flex;

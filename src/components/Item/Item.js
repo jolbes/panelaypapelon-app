@@ -6,16 +6,15 @@ import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import ItemCount from "../ItemCount/ItemCount";
 
-
-const Item = ({products}) => {
-    const {id, title, price, stock, description, image} = products
-    return(
-        <Card sx={{ maxWidth: 345 }} key={id}>
+const Item = (getProducts) => {
+  const { title, price, stock, description, image } = products;
+  return (
+    <Card sx={{ maxWidth: 345 }}>
       <CardMedia
         component="img"
         height="140"
         image={image}
-        alt="green iguana"
+        alt="Imagen del producto"
       />
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
@@ -32,11 +31,10 @@ const Item = ({products}) => {
         </Typography>
       </CardContent>
       <CardActions>
-          <ItemCount initil={1} />
+        <ItemCount initil={1} />
       </CardActions>
     </Card>
+  );
+};
 
-    )
-}
-
-export default Item
+export default Item;

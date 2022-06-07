@@ -48,12 +48,14 @@ export const getProducts = () => {
     setTimeout( () => {
       if(ok){
         resolve(products)
+        
       }else{
       reject('Error')
       }
-    }, 5000   )
+    }, 2000   )
   })
 }
+console.log(products)
 
 const product = {
   id: 4,
@@ -64,7 +66,5 @@ const product = {
   image: "./assets/items/producto4.webp",
 };
 
-
-
-export default products;
+export default getProducts
 export { product };
