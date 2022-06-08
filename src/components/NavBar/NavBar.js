@@ -28,10 +28,10 @@ const NavBar = () => {
               <Button disableRipple style={{color: 'orange'}} variant="text" className="btn-links" href="/tienda">Tienda</Button>
             </li>
             <li>
-              <Button disableRipple style={{color: 'orange'}} variant="text" className="btn-links" href="/">Acerca de</Button>
+              <Button disableRipple style={{color: 'orange'}} variant="text" className="btn-links" href="/acerca">Acerca de</Button>
             </li>
             <li>
-              <Button disableRipple style={{color: 'orange'}} variant="text" className="btn-links" href="/Contacto">Contacto</Button>
+              <Button disableRipple style={{color: 'orange'}} variant="text" className="btn-links" href="/contacto">Contacto</Button>
             </li>
           </ul>
         </div>

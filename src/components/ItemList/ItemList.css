@@ -1,3 +1,13 @@
 .imgMapProducts img{
-    width: 250px;
+    width: 150px;
+}
+
+.item__list{
+    display: flex;
+    flex-direction: row;
+}
+
+.item__list__card{
+    display: flex;
+    flex-direction: row;
 }

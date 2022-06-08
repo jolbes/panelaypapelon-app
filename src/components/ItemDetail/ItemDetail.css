@@ -1,11 +1,10 @@
 .itemDetail {
-  display: flex;
-  flex-direction: column;
-  align-content: center;
+  display: block;
+  
 }
 .itemDetail img {
   display: flex;
   flex-direction: row;
   align-self: center;
-  width: 450px;
+  width: 250px;
 }

@@ -3,6 +3,7 @@ import ItemList from "../ItemList/ItemList";
 import getProducts from "../../utils/productsMock";
 import "./ItemListContianer.css";
 
+
 const ItemListContianer = () => {
   const [products, setProducts] = useState([]);
 
@@ -23,6 +24,7 @@ const ItemListContianer = () => {
   return (
     <div>
       <ItemList products={products} />
+      
     </div>
   );
 };

@@ -1,9 +1,11 @@
 import "./ItemCount.css";
 import { Button } from "@mui/material";
-import React, { useState } from "react";
+import React, { useState} from "react";
+import { Link } from "react-router-dom";
 
 const ItemCount = ({ initial, stock }) => {
   const [count, setCount] = useState(initial);
+  const [showButton, setShowButton] = useState(false)
   const addCount = () => {
     if (count < stock) 
       setCount(count + 1);
@@ -14,6 +16,7 @@ const ItemCount = ({ initial, stock }) => {
       setCount(count - 1);
     }
   };
+
   return (
     <>
       <div className="item-count">
@@ -23,14 +26,14 @@ const ItemCount = ({ initial, stock }) => {
         <p>{count}</p>
         <Button onClick={addCount}>+</Button>
       </div>
-      <Button className="btn-buy"
-        onClick={(onAdd) => {
-          if (count !== 0) {
-            console.log(`La cantidad de items a comprar es: ${count}`)
-          }
-        }}>
-        Comprar
-      </Button>
+      
+        <Button onClick={() => {
+            setShowButton(true)
+          }}
+          > Agregar Producto
+        </Button>
+        {showButton == true && <Button variant="outlined"><Link to='/cart'>Terminar Compra</Link></Button> }
+      
     </>
   );
 };

@@ -1,0 +1,6 @@
+.card__media{
+    display: flex;
+    flex: wrap;
+    height: 300px;
+    margin: 0 20px 0 20px;
+}

@@ -5,17 +5,23 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import ItemCount from "../ItemCount/ItemCount";
+import { Button } from "@mui/material";
+import { Link } from "react-router-dom";
+import {useState} from 'react';
+import './Item.css'
 
-const Item = ({ product }) => {
+const Item = ({ product, setShowButton }) => {
   const { title, price, stock, description, image } = product;
+  
   return (
+    <>
     <Card sx={{ maxWidth: 345 }}>
-      <CardMedia
+      <CardMedia className="card__media"
         component="img"
-        height="140"
+        height="240"
         image={image}
         alt="Imagen del producto"
-      />
+        />
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
           {title}
@@ -33,7 +39,10 @@ const Item = ({ product }) => {
       <CardActions>
         <ItemCount initial={1} stock={stock} />
       </CardActions>
+      
+      
     </Card>
+    </>
   );
 };
 
