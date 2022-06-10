@@ -1,40 +1,23 @@
-import "./ItemCount.css";
-import { Button } from "@mui/material";
-import React, { useState} from "react";
-import { Link } from "react-router-dom";
+import React, { useState } from "react"
+import { Button } from '@mui/material';
 
-const ItemCount = ({ initial, stock }) => {
-  const [count, setCount] = useState(initial);
-  const [showButton, setShowButton] = useState(false)
-  const addCount = () => {
-    if (count < stock) 
-      setCount(count + 1);
+const ItemCount = ({cantidad, setCantidad, setShowButton}) => {
 
-  };
-  const removeCount = () => {
-    if (count > 1) {
-      setCount(count - 1);
+    const addProduct = () => {
+        setCantidad(cantidad + 1)
     }
-  };
 
-  return (
-    <>
-      <div className="item-count">
-        <Button onClick={removeCount} disabled={count === 0}>
-          -
-        </Button>
-        <p>{count}</p>
-        <Button onClick={addCount}>+</Button>
-      </div>
-      
-        <Button onClick={() => {
-            setShowButton(true)
-          }}
-          > Agregar Producto
-        </Button>
-        {showButton == true && <Button variant="outlined"><Link to='/cart'>Terminar Compra</Link></Button> }
-      
-    </>
-  );
-};
-export default ItemCount;
+    return(
+        <>
+        <label>Selecciona cantidad</label>
+        <div style={{display: 'flex', justifyContent: 'space-between', margin: '20px 0'}}>
+            <button >-</button>
+            <p>{cantidad}</p>
+            <button onClick={addProduct}>+</button>
+        </div>
+        <Button variant='contained' onClick={() => setShowButton(true)}>Agregar producto</Button>
+        </>
+    )
+}
+
+export default ItemCount

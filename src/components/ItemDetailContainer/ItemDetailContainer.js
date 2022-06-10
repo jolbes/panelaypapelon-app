@@ -1,33 +1,36 @@
-import React, { useEffect, useState } from "react"
-import Item from "../Item/Item"
-import ItemDetail from "../ItemDetail/ItemDetail";
-import { products } from "../../utils/productsMock"
+import React, { useEffect, useState} from "react"
+import ItemDetail from "../ItemDetail/ItemDetail"
+import productos from '../../utils/productsMock'
+import { useParams, useNavigate } from "react-router-dom"
 
-const ItemDetailContainer = ({greeting}) => {
-    const [item, setProduct] = useState({})
-    const getItem = () => {
-        return new Promise ( (resolve, reject)  => {
-            setTimeout( () => {
-                resolve(products)
-                
-            }, 2000 )
-        })
-    }
-    useEffect ( () => {
-        getItem().then( (res) => {
+const ItemDetailContainer = () => {
+    const { id } = useParams()
+    const navigate = useNavigate()
+    const [product , setProduct] = useState({})
 
-            setProduct(res)
-        })
-    },[])
+    useEffect(() => {
+        // getItem()
+        // .then( (res) => {
+        //     console.log("Respuesta GetItem: ", res)
+        //     setProduct(res)
+        // })
+        console.log("productFilter: ", productFilter)
+        if(productFilter === undefined){
+            navigate('/notFound')
+        }else {
+            setProduct(productFilter)
+        }
+    }, [id])
+
+    const productFilter = productos.find( (product) => {
+        return product.id == id
+    })
 
     return(
-    <>
-        <div>
-            <h1>Detalles del producto</h1>
-        </div>
-        {Object.keys(products).length > 0 && <ItemDetail data={products} />}
-        </>)
-
+        <>
+            <ItemDetail data={product}/>
+        </>
+    )
 }
 
 export default ItemDetailContainer
