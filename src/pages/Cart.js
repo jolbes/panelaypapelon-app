@@ -2,10 +2,12 @@ import React, { useContext } from "react"
 import { Container, Button } from "@mui/material"
 import { Delete } from "@mui/icons-material"
 import CartContext from "../context/CartContext"
+import { Link } from "react-router-dom"
 
 const Cart = () => {
     const { cartListItems, totalPrice } = useContext(CartContext)
     console.log("cartListItems desde checkout: ", cartListItems)
+    
     return(
         <Container className='container-general'> 
         <h2>Checkout: </h2>
@@ -18,7 +20,7 @@ const Cart = () => {
                 <h2>Quitar</h2>
             </div>
             {cartListItems.map( (item) => {
-                const {id, title, image, price} = item
+                const {id, title, image, price } = item
                 return(
                     <div className='cart-table__content' key={id}>
                         <div className='cart-table__content-img'>
@@ -42,7 +44,7 @@ const Cart = () => {
                 )
             })}
             <div className='cart-footer'>
-                <Button className='btn-custom'>Continuar comprando</Button>
+                <Button className='btn-custom'><Link to='/'>Continuar comprando</Link></Button>
                 <div className='cart-checkout-details'>
                     <div className='cart-checkout__subtotal'>
                         <p>Subtotal</p>
