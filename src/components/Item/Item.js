@@ -1,5 +1,5 @@
 import './Item.css'
-import React, { useState, useContext } from 'react'
+import React, { useContext } from 'react'
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import { Button } from '@mui/material';
@@ -18,7 +18,7 @@ const Item = ({ image, title, price, stock, id}) => {
                     <div className="card-item__img-box">
                         <img src={`/${image}`} alt={"producto"}/> 
                         <Button variant={'contained'} className="card-btn-details">
-                            <Link to={`/product/${id}`}>Ver Detalle</Link>
+                            <Link to={`/item/${id}`}>Ver Detalle</Link>
                         </Button>
                     </div>
                     <div className='card-item__data-box'>

@@ -5,6 +5,7 @@ import {getFirestore} from 'firebase/firestore';
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
+
 const FirebaseConfig = {
   apiKey: "AIzaSyAI1HyldDneMsOGJ5rdqbKYaLRFHbSBZ9k",
   authDomain: "panelaypapelon-app.firebaseapp.com",
