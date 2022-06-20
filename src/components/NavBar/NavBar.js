@@ -23,7 +23,7 @@ const NavBar = () => {
       setAnchorEl(null);
     };
 
-    const categories = ["Categoria 1", "Categoria 2", "Categoria 3"]
+    const categories = ["Veganos", "Sin Azúcar añadida", "Sin Glutten", "Sin Lactosa"]
 
     return (
         <AppBar position="static" className={`header-primary ${darkTheme ? 'dark-mode' : ''}`}>
@@ -65,8 +65,8 @@ const NavBar = () => {
                             'aria-labelledby': 'basic-button',
                             }}
                         >
-                            {categories.map( (cat) => {
-                                return <MenuItem onClick={handleClose}><Link to={`/products/${cat}`}>{cat}</Link></MenuItem>
+                            {categories.map( (category) => {
+                                return <MenuItem onClick={handleClose}><Link to={`/products/${category}`}>{category}</Link></MenuItem>
                             })}
                         </Menu>
                     </li>

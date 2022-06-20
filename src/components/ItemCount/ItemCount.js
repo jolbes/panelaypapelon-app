@@ -1,10 +1,12 @@
 import React, { useState } from "react"
 import { Button } from '@mui/material';
 
-const ItemCount = ({cantidad, setCantidad, setShowButton}) => {
+const ItemCount = ({stock, cantidad, setCantidad, setShowButton}) => {
 
-    const addProduct = () => {
+    const addProduct = () => { 
+        if(cantidad < stock){
         setCantidad(cantidad + 1)
+        }
     }
 
     return(
@@ -15,7 +17,9 @@ const ItemCount = ({cantidad, setCantidad, setShowButton}) => {
             <p>{cantidad}</p>
             <button onClick={addProduct}>+</button>
         </div>
-        <Button variant='contained' onClick={() => setShowButton(true)}>Agregar producto</Button>
+        <Button className="btn__Add_Producto" 
+        variant='contained' 
+        onClick={() => setShowButton(true)}>Agregar producto</Button>
         </>
     )
 }

@@ -7,7 +7,7 @@ const Filters = () => {
         <div className="container-filters">
             <h4>Filtros</h4>
             <div className='filter-category'>
-                <p className='filter-category__name'>Color</p>
+                <p className='filter-category__name'>Tipos</p>
                 <div className='filter-item'>
                     <Checkbox {...label} size="small" color="default" />
                     <span>Veganos</span>
@@ -26,7 +26,7 @@ const Filters = () => {
                 </div>
             </div>
             <div className='filter-category'>
-                <p className='filter-category__name'>Talle</p>
+                <p className='filter-category__name'>Presentación</p>
                 <div className='filter-item'>
                     <Checkbox {...label} size="small" color="default" />
                     <span>250 ml</span>

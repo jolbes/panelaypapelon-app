@@ -5,4 +5,27 @@
 }
 .cart__custom{
     color: black;
+    
+}
+.icon-cart{
+    color: rgb(255, 115, 0);
+}
+
+.divCartListItems p{
+position: absolute;
+top: 5px;
+right: 1%;
+height: 20px;
+width: 20px;
+border: 1px solid rgb(255, 255, 255);
+border-radius: 50%;
+background-color: rgb(255, 115, 0);
+}
+.cartListItems{
+
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2px;
 }

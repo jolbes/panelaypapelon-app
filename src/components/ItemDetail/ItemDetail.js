@@ -5,11 +5,12 @@ import Select from '@mui/material/Select';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import './ItemDetail.css'
 import ItemCount from '../ItemCount/ItemCount';
-import { Button } from '@mui/material';
+import { Button, Container } from '@mui/material';
 
 
 const ItemDetail = ({data}) => {
     const [size, setSize] = useState('');
+    const [stock, setStock] = useState()
     const [cantidad, setCantidad] = useState(1)
     const [showButton, setShowButton] = useState(false)
 
@@ -32,8 +33,8 @@ const ItemDetail = ({data}) => {
                     <h2>{data.title}</h2>
                     <FavoriteBorderIcon  />
                 </div>
-                <p>{data.price}</p>
-                <span>3 Cuotas sin interés de $ {data.price / 3}</span>
+                <p>$ {data.price}</p>
+                <span>Pagalo en <b>3</b> Cuotas sin interés de $ {data.price / 3}</span>
                 
                 <label>Selecciona el peso</label>
                 <Select
@@ -41,7 +42,7 @@ const ItemDetail = ({data}) => {
                     labelId="demo-simple-select-label"
                     id="demo-simple-select"
                     value={size}
-                    placeholder="Selecciona tu talle"
+                    placeholder="Selecciona la presentacaión"
                     onChange={handleChange}
                     >
                     <MenuItem value={'s'}>250 gr/ml</MenuItem>
@@ -53,10 +54,17 @@ const ItemDetail = ({data}) => {
                     cantidad={cantidad}
                     setShowButton={setShowButton}
                     setCantidad={setCantidad}
+                    setStock={stock}
                 />
                 :
                 <Button variant='outlined'><Link to='/cart'>Termina mi compra</Link></Button>
                 }
+                
+                
+                    <Container className='description-section'>
+                        <h1 className='font-bold'>Descripción del producto</h1>
+                        <p className='font-serif'>{data.description}</p>
+                    </Container>
                 
             </div>
         </div>

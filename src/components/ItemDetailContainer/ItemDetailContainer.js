@@ -25,17 +25,19 @@ const ItemDetailContainer = () => {
         // }
     }, [id])
 
-    const getProduct = async () => {
+    const getProduct = async() => {
         const docRef = doc(db, "productos", id)
         const docSnaptshop = await getDoc(docRef)
+        console.log("docSnaptshop: ", docSnaptshop)
         let product = docSnaptshop.data()
         product.id = docSnaptshop.id
+        console.log("producto unico: ", product)
         return product
     }
 
-    // const productFilter = productos.find( (product) => {
-    //     return product.id == id
-    // })
+     const productFilter = productos.find( (product) => {
+         return product.id == id
+     })
 
     return(
         <>

@@ -1,11 +1,12 @@
 .navbar {
-    float: left;
+    float: right;
     width: 100%;
     border-bottom: #ccc;
     display: flex;
 }
 .container-logo {
     width: 150px;
+    padding: 0 5px 0 5px;
 }
 .container-logo img {
     width: 100%;
@@ -17,20 +18,22 @@
 }
 .header-primary .navbar li {
     margin-right: 10px;
+    font-family: 'Fredoka One', cursive;
 }
 .header-primary .navbar .navbar__btn {
-    font-family: 'Lato', sans-serif;
+    font-family: 'Fredoka One', cursive;
     text-transform: none;
     font-weight: 400;
-    font-size: 16px;
-    color: black;
+    font-size: 1.2rem;
+    color: rgb(230, 148, 55);
 }
 .header-primary .navbar .navbar__btn:hover {
-    font-weight: 600;
+    font-family: 'Fredoka One', cursive;
 }
 
 .header-primary .navbar .navbar__btn:hover:before {
-    width: 85%;
+    width: 55%;
+    font-family: 'Fredoka One', cursive;
 }
 
 .header-primary .navbar .navbar__btn:before {
@@ -38,14 +41,16 @@
     position: absolute;
     width: 0;
     transition: width 0.3s ease;
-    height: 1px;
-    background: black;
+    height: 3px;
+    background: rgb(230, 148, 55);
     bottom: 5px;
+    font-family: 'Fredoka One', cursive;
 }
 
 .header-primary .navbar .navbar__btn a {
-    color: black;
+    color: rgb(230, 148, 55);
     text-decoration: none;
+    font-family: 'Fredoka One', cursive;
 }
 
 .item-cart-prod {float: left;width: 355px;display: flex;padding: 10px;border-bottom: 1px solid #ccc;}

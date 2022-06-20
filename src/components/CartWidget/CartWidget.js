@@ -1,13 +1,15 @@
 import React, { useState, useContext } from 'react';
-import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import ShoppingBasketIcon from '@mui/icons-material/ShoppingBasket';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import DeleteIcon from '@mui/icons-material/Delete';
 import CartContext from '../../context/CartContext'
 import { Link } from 'react-router-dom';
+import { Button } from '@mui/material';
+import './CartWidget.css'
 
 const CartWidget = () =>  {
-    const { cartListItems } = useContext(CartContext)
+    const { cartListItems, deleteProduct } = useContext(CartContext)
     const [anchorEl, setAnchorEl] = useState(null);
     const open = Boolean(anchorEl);
     const handleClick = (event) => {
@@ -16,16 +18,18 @@ const CartWidget = () =>  {
     const handleClose = () => {
         setAnchorEl(null);
     };
-
     return(
         <div className='cart-container-icon'>
-            <ShoppingCartIcon 
-                color={'primary'} 
+            <div className='divCartListItems'>
+            <ShoppingBasketIcon className='icon-cart'
                 aria-controls={open ? 'basic-menu' : undefined}
                 aria-haspopup="true"
                 aria-expanded={open ? 'true' : undefined}
                 onClick={handleClick}
+                fontSize="large"
             />
+            <p className='cartListItems'>{cartListItems.length}</p>
+            </div>
             <Menu
                 id="basic-menu"
                 anchorEl={anchorEl}
@@ -53,14 +57,18 @@ const CartWidget = () =>  {
                                 <span>$ {item.price}</span>
                             </div>
                             <div className='cart-prod__action'>
-                                <button>
+                                <button onClick={() => deleteProduct(item)}>
                                     <DeleteIcon />
                                 </button>
                             </div>
                         </div>
                         )
                     })}
-                    
+                    <div className='cart-checkout-details'>
+                        <Link to="/cart">
+                            <button style={{cursor: 'pointer'}} onClick={handleClose}>Terminar compra</button>
+                        </Link>
+                    </div>
                 </div>
             </Menu>
         </div>

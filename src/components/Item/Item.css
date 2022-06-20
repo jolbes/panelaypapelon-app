@@ -1,10 +1,14 @@
 .card-item img {
-    width: 100%;
+    width: 80%;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
 }
 
 .card-item {
     display: flex;
     flex-direction: column;
+    height: 500px;
     position: relative;
 }
 
@@ -38,36 +42,22 @@
     border-bottom: 1px solid #ccc;
     margin-bottom: 10px;
 }
-
-.card-item .card-btn-details {
-    position: absolute;
-    width: 100%;
-    background: none;
-    border: none;
-    left: 0;
-    box-shadow: none;
-    bottom: -30px;
-    background: #ffffffa1;
-    color: black;
-    z-index: 0;
-    border-radius: 0px;
-    opacity: 0;
+.card-item .card-btn-details{
+    background-color: white;
+    color: orange;
     transition: all 0.3s ease;
+    margin: 5px 0;
 }
 
-.card-item .card-item__img-box:hover .card-btn-details {
-    bottom: 0px;
-    opacity: 1;
-    background-color: #eeb444;
-}
-
-.card-item .card-btn-details:hover {
-    background: white;
-    box-shadow: none;
+.card-item .card-btn-details:hover{
+    background-color: orange;
+    color: white;
+    transition: all 0.3s ease;
 }
 
 .card-info-data {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
     padding-left: 10px;
@@ -77,11 +67,16 @@
 }
 
 .card-item__img-box {
+    display: flex;
+    justify-content: center;
     position: relative;
-    width: 300px;
+    width: 100%;
 }
 
 .card-item__data-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     position: relative;
     z-index: 1;
     background: white;
@@ -93,8 +88,9 @@
 }
 
 .card-info-data p, .card-info-data span {
+    display: inline;
     margin: 0;
-    font-size: 14px;
+    font-size: 1.2rem;
     font-weight: 400;
 }
 
@@ -102,20 +98,19 @@
     font-weight: 900;
 }
 
-.card-item-container .card-item__data-box .card-item-button {
-    font-family: 'Lato';
-    text-transform: none;
-    background: rgb(247, 140, 0);
-    border-radius: 25px;
+.card-item-container .card-item-button {
+    font-family: 'Dancing Script';
+    color: white;
+    background: orange;
     padding: 5px;
     width: 100%;
     box-shadow: none !important;
     border: 1px solid rgba(0, 0, 0, 0);
 }
 
-.card-item-container .card-item__data-box .card-item-button:hover {
-    background: white;
-    color: rgb(236, 154, 0);
+.card-item-container .card-item-button:hover {
+    background: rgb(240, 182, 75);
+    color: rgb(255, 255, 255);
 }
 
 .color-group-selector {margin-bottom: 15px;display: flex;}

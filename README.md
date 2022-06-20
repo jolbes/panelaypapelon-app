@@ -2,9 +2,9 @@
 
 ## Información del Proyecto
 
-Este proyecto es creado para cumplir desafios de CODERHOUSE
+Este proyecto es creado para cumplir desafios de CODERHOUSE 🔻 
 
-Su enfoque es un ecommerce de productos saludables
+Su enfoque es un ecommerce de productos saludables ✅ 
 
 ## Profesor y Tutor
 
@@ -20,7 +20,7 @@ Material UI @mui/material
 
 Material Icons @mui/icons-material
 
-Bootstrap
+
 
 ## Información de la app
 

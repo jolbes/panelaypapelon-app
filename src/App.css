@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Fredoka+One&display=swap');
 .App {
   text-align: center;
 }
@@ -9,7 +9,7 @@
 }
 
 h1,h2,h3,h4,p,span,a,input {
-  font-family: 'Lato', sans-serif;
+  font-family: 'Dancing Script', cursive;
 }
 
 .general-container {
@@ -18,7 +18,7 @@ h1,h2,h3,h4,p,span,a,input {
 }
 .general-container h2{
   padding: 50px;
-  font-size: 2rem;
+  font-size: 3rem;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -125,7 +125,7 @@ button.button-filter-submit {
   border: 1px solid black;
   margin-top: 10px;
   padding: 10px;
-  font-family: 'Lato';
+  font-family: 'Ubuntu';
   color: white;
   background: black;
   cursor: pointer;
@@ -133,7 +133,7 @@ button.button-filter-submit {
 }
 
 button.button-filter-clean {
-  font-family: 'Lato';
+  font-family: 'Ubuntu';
   background: none;
   border: none;
   text-decoration: underline;
@@ -159,4 +159,4 @@ button.button-filter-clean {
 
 .cart-footer button {/* background: black; */}
 
-.cart-checkout-details button {background: black;border-radius: 40px;text-transform: none;color: white;font-family: 'Lato';padding: 10px 20px;margin-top: 15px;font-size: 14px;}
+.cart-checkout-details button {background: black;border-radius: 40px;text-transform: none;color: white;font-family: 'Ubuntu';padding: 10px 20px;margin-top: 15px;font-size: 14px;}
