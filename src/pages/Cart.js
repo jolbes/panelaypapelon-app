@@ -6,10 +6,10 @@ import Modal from '../components/Modal/Modal'
 import TextField from '@mui/material/TextField';
 import { addDoc, collection } from 'firebase/firestore'
 import db from "../utils/FirebaseConfig"
-import { useNavigate } from "react-router-dom"
+import { useNavigate, Link } from "react-router-dom"
 
 const Cart = () => {
-    const { cartListItems, totalPrice, cleanCartProducts } = useContext(CartContext)
+    const { cartListItems, totalPrice, cleanCartProducts, deleteProduct } = useContext(CartContext)
     const [showModal, setShowModal] = useState(false)
     const [formValue, setFormValue] = useState({
         name: '',
@@ -56,7 +56,7 @@ const Cart = () => {
 
     return(
         <Container className='container-general'> 
-        {console.log("order:", order)}
+        {/* {console.log("order:", order)} */}
         <h2>Checkout: </h2>
         <div className='cart-section'>
             <div className='col-cart-table__head'>
@@ -83,15 +83,15 @@ const Cart = () => {
                             <p>1</p>
                         </div>
                         <div className='cart-table__content-price'>
-                            <button className='btn-delete'>
-                                <Delete />
+                            <button className='btn-delete' >
+                                <Delete  onClick={deleteProduct} />
                             </button>
                         </div>
                     </div>
                 )
             })}
             <div className='cart-footer'>
-                <Button className='btn-custom'>Continuar comprando</Button>
+                <Button className='btn-custom'><Link to="/">Continuar comprando</Link></Button>
                 <div className='cart-checkout-details'>
                     <div className='cart-checkout__subtotal'>
                         <p>Subtotal</p>

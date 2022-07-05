@@ -9,18 +9,19 @@ import { Button, Container } from '@mui/material';
 
 
 const ItemDetail = ({data}) => {
-    const [size, setSize] = useState('');
+    const [size, setSize] = useState('')
     const [stock, setStock] = useState()
+    const [qty, setQty] = useState()
     const [cantidad, setCantidad] = useState(1)
     const [showButton, setShowButton] = useState(false)
 
     const handleChange = (event) => {
         setSize(event.target.value);
     };
-    const addProductToCart = () => {
-        console.log("PRODUCTO A AGREGAR: ", data)
-        console.log("CANTIDAD:", cantidad )
-    }
+    // const addProductToCart = () => {
+    //     console.log("PRODUCTO A AGREGAR: ", data)
+    //     console.log("CANTIDAD:", cantidad )
+    // }
 
     console.log("Data desde ItemDetail: ", data)
     return (

@@ -1,0 +1,9 @@
+.checkout-modal{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.checkout-modal h1{
+    font-size: 3rem;
+}

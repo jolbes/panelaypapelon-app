@@ -26,7 +26,7 @@ const NavBar = () => {
     const categories = ["Veganos", "Sin Azúcar añadida", "Sin Glutten", "Sin Lactosa"]
 
     return (
-        <AppBar position="static" className={`header-primary ${darkTheme ? 'dark-mode' : ''}`}>
+        <AppBar position="static" className='header-primary'>
             <Toolbar>
                 <div className='container-logo'>
                     <img src="./assets/brand/logo.png" />
@@ -91,7 +91,7 @@ const NavBar = () => {
                         </Button>
                     </li>
                 </ul>
-                <ThemeSwitch />
+                
                 <CartWidget />
             </Toolbar>
         </AppBar>

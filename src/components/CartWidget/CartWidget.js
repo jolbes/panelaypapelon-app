@@ -1,11 +1,9 @@
 import React, { useState, useContext } from 'react';
 import ShoppingBasketIcon from '@mui/icons-material/ShoppingBasket';
 import Menu from '@mui/material/Menu';
-import MenuItem from '@mui/material/MenuItem';
 import DeleteIcon from '@mui/icons-material/Delete';
 import CartContext from '../../context/CartContext'
 import { Link } from 'react-router-dom';
-import { Button } from '@mui/material';
 import './CartWidget.css'
 
 const CartWidget = () =>  {
@@ -43,7 +41,7 @@ const CartWidget = () =>  {
                     {cartListItems.length === 0 && (
                         <>
                             <p>No hay productos agregados al carrito</p>
-                            <Link to="/products/remeras" >Empezar a comprar</Link>
+                            <Link to="/" >Empezar a comprar</Link>
                         </>
                     )}
                     {cartListItems.map( (item) => {
