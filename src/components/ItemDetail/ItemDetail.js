@@ -42,7 +42,7 @@ const ItemDetail = ({data}) => {
                     className='select-custom'
                     labelId="demo-simple-select-label"
                     id="demo-simple-select"
-                    value={size}
+                    value={data.size}
                     placeholder="Selecciona la presentacaión"
                     onChange={handleChange}
                     >
@@ -55,7 +55,7 @@ const ItemDetail = ({data}) => {
                     cantidad={cantidad}
                     setShowButton={setShowButton}
                     setCantidad={setCantidad}
-                    setStock={stock}
+                    setStock={setStock}
                 />
                 :
                 <Button variant='outlined'><Link to='/cart'>Termina mi compra</Link></Button>

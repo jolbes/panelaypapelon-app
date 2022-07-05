@@ -1,27 +1,45 @@
 import React, { useState } from "react"
 import { Button } from '@mui/material';
 
-const ItemCount = ({stock, cantidad, setCantidad, setShowButton}) => {
+const ItemCount = ({stock, initial, onAdd, setShowState}) => {
 
-    const addProduct = () => { 
-        if(cantidad < stock){
-        setCantidad(cantidad + 1)
-        }
+    const [count, setCount] = useState(initial)
+    const handleClick = (e) =>{
+        e.preventDefault();
+        setShowState(true)
+        onAdd(count)
     }
+
 
     return(
         <>
         <label>Selecciona cantidad</label>
-        <div style={{display: 'flex', justifyContent: 'space-between', margin: '20px 0'}}>
-            <button >-</button>
-            <p>{cantidad}</p>
-            <button onClick={addProduct}>+</button>
+        <Button 
+        variant="outlined" 
+        onClick={() => setCount(count - 1)} 
+        disabled={count < 1}>
+            -
+        </Button>
+        <p>{count}</p>
+        <Button 
+        variant="outlined" 
+        onClick={() => setCount(count + 1)} 
+        disabled={count >=  stock}>
+            +
+        </Button>
+
+        <div className="container-btn">
+                <Button
+                variant="contained" 
+                onClick={handleClick} 
+                disabled={stock===0 || count===0} 
+                className="btn-carrito">
+                    AGREGAR AL CARRITO
+                </Button>
         </div>
-        <Button className="btn__Add_Producto" 
-        variant='contained' 
-        onClick={() => setShowButton(true)}>Agregar producto</Button>
-        </>
+
+         </>
     )
-}
+    }
 
 export default ItemCount
