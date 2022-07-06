@@ -49,7 +49,6 @@ const Cart = () => {
     const saveData = async (newOrder) => {
         const orderFirebase = collection(db, 'ordenes')
         const orderDoc = await addDoc(orderFirebase, newOrder)
-        console.log("orden generada: ", orderDoc.id)
         setSuccess(orderDoc.id)
         cleanCartProducts()
     }
@@ -67,7 +66,7 @@ const Cart = () => {
                 <h2>Quitar</h2>
             </div>
             {cartListItems.map( (item) => {
-                const {id, title, image, price} = item
+                const {id, title, image, price, count} = item
                 return(
                     <div className='cart-table__content' key={id}>
                         <div className='cart-table__content-img'>
@@ -80,7 +79,7 @@ const Cart = () => {
                             <p>$ {price}</p>
                         </div>
                         <div className='cart-table__content-quantity'>
-                            <p>1</p>
+                            <p>{count}</p>
                         </div>
                         <div className='cart-table__content-price'>
                             <button className='btn-delete' >
@@ -136,6 +135,14 @@ const Cart = () => {
                         id="outlined-basic" 
                         name="email"
                         label="Mail" 
+                        value={formValue.email}
+                        variant="outlined" 
+                        onChange={handleChange}
+                    />
+                    <TextField 
+                        id="outlined-basic" 
+                        name="c.email"
+                        label="Confirmar Mail" 
                         value={formValue.email}
                         variant="outlined" 
                         onChange={handleChange}

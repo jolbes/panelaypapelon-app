@@ -14,15 +14,8 @@ const ItemDetailContainer = () => {
         
         getProduct()
         .then( (prod) => {
-            console.log("Respuesta GetItem: ", prod)
             setProduct(prod)
         })
-        // console.log("productFilter: ", productFilter)
-        // if(productFilter === undefined){
-        //     navigate('/notFound')
-        // }else {
-        //     setProduct(productFilter)
-        // }
     }, [id])
 
     const getProduct = async() => {

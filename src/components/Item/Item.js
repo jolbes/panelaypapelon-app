@@ -8,7 +8,7 @@ import { ThemeContext } from '../../context/ThemeContext'
 import CartContext from '../../context/CartContext'
 
 
-const Item = ({ image, title, price, stock, id}) => {
+const Item = ({ image, title, price, stock, id, count}) => {
     const { darkTheme } = useContext(ThemeContext)
     const { addProductToCart } = useContext(CartContext)
     return(
@@ -30,7 +30,7 @@ const Item = ({ image, title, price, stock, id}) => {
                         <Button 
                             variant={'contained'} 
                             className="card-item-button"
-                            onClick={() => addProductToCart({ image, title, price, stock, id})}
+                            onClick={() => addProductToCart({ image, title, price, stock, id, count})}
                         >
                                 Agregar al carrito
                     </Button>

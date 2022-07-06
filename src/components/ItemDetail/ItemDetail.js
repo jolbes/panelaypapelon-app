@@ -18,12 +18,7 @@ const ItemDetail = ({data}) => {
     const handleChange = (event) => {
         setSize(event.target.value);
     };
-    // const addProductToCart = () => {
-    //     console.log("PRODUCTO A AGREGAR: ", data)
-    //     console.log("CANTIDAD:", cantidad )
-    // }
 
-    console.log("Data desde ItemDetail: ", data)
     return (
         <div className='detail-product-container'>
             <div className="detail-product-image">
@@ -52,7 +47,7 @@ const ItemDetail = ({data}) => {
                 </Select>
                 {!showButton ?
                 <ItemCount 
-                    cantidad={cantidad}
+                    cantidad={qty}
                     setShowButton={setShowButton}
                     setCantidad={setCantidad}
                     setStock={setStock}

@@ -1,13 +1,16 @@
-import React, { useState } from "react"
+import React, { useState, useContext } from "react"
 import { Button } from '@mui/material';
+import CartContext from '../../context/CartContext'
 
-const ItemCount = ({stock, initial, onAdd, setShowState}) => {
+const ItemCount = ({stock, initial, setShowState}) => {
 
     const [count, setCount] = useState(initial)
+    const { addProductToCart } = useContext(CartContext)
     const handleClick = (e) =>{
         e.preventDefault();
         setShowState(true)
-        onAdd(count)
+        addProductToCart(count)
+        
     }
 
 
@@ -32,7 +35,7 @@ const ItemCount = ({stock, initial, onAdd, setShowState}) => {
                 <Button
                 variant="contained" 
                 onClick={handleClick} 
-                disabled={stock===0 || count===0} 
+                disabled={stock === 0 || count === 0} 
                 className="btn-carrito">
                     AGREGAR AL CARRITO
                 </Button>
