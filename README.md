@@ -29,3 +29,7 @@ Panela & Papelón Market es una tienda de productos saludables
 para cambiar el estilo de vida de nuestros cliente y obtener
 
 una mejor condición física.
+
+## Preview de recorrido de una compra
+
+<img src="./panelaypapelon-app.gif">
