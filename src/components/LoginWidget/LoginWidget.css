@@ -1,0 +1,10 @@
+.div__loging__custom{
+    display: flex;
+    size: 30px;
+    margin: 10px;
+}
+
+.loging__custom{
+    display: flex;
+    color: black;
+}

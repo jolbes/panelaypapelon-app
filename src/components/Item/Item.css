@@ -1,0 +1,128 @@
+.card-item img {
+    width: 80%;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.card-item {
+    display: flex;
+    flex-direction: column;
+    height: 500px;
+    position: relative;
+}
+
+.card-item p {
+    font-size: 18px;
+    font-weight: 700;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.card-item span {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.card-item-container {
+    border-radius: 0px !important;
+    box-shadow: none !important;
+    border: 1px solid #ccc;
+}
+
+.card-item-container > div {
+    padding: 0px;
+}
+
+.count-item {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 10px;
+}
+.card-item .card-btn-details{
+    background-color: white;
+    color: orange;
+    transition: all 0.3s ease;
+    margin: 5px 0;
+}
+
+.card-item .card-btn-details:hover{
+    background-color: orange;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.card-info-data {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-weight: 600;
+    padding: 10px 0px;
+}
+
+.card-item__img-box {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+}
+
+.card-item__data-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    background: white;
+    padding: 0px 20px;
+}
+
+.card-item-container > .MuiCardContent-root {
+    padding-bottom: 15px !important;
+}
+
+.card-info-data p, .card-info-data span {
+    display: inline;
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+.card-info-data span {
+    font-weight: 900;
+}
+
+.card-item-container .card-item-button {
+    font-family: 'Dancing Script';
+    color: white;
+    background: orange;
+    padding: 5px;
+    width: 100%;
+    box-shadow: none !important;
+    border: 1px solid rgba(0, 0, 0, 0);
+}
+
+.card-item-container .card-item-button:hover {
+    background: rgb(240, 182, 75);
+    color: rgb(255, 255, 255);
+}
+
+.color-group-selector {margin-bottom: 15px;display: flex;}
+
+.color-group-selector button.color-selector {width: 20px;height: 20px;margin-right: 10px;cursor: pointer;border: 1px solid black;border-radius: 50%;}
+
+.green {background: #013488;}
+
+.red {background: #eeb444;}
+
+.black {background: black;}
+
+.dark-mode .card-item__data-box {background: black;}
+
+.dark-mode * {color: white !important;}

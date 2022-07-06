@@ -2,9 +2,9 @@
 
 ## Información del Proyecto
 
-Este proyecto es creado para cumplir desafios de CODERHOUSE
+Este proyecto es creado para cumplir desafios de CODERHOUSE 🔻 
 
-Su enfoque es un ecommerce de productos saludables
+Su enfoque es un ecommerce de productos saludables ✅ 
 
 ## Profesor y Tutor
 
@@ -19,3 +19,17 @@ Centro Educativo: CODERHOUSE
 Material UI @mui/material 
 
 Material Icons @mui/icons-material
+
+
+
+## Información de la app
+
+Panela & Papelón Market es una tienda de productos saludables
+
+para cambiar el estilo de vida de nuestros cliente y obtener
+
+una mejor condición física.
+
+## Preview de recorrido de una compra
+
+<img src="./panelaypapelon-app.gif">
